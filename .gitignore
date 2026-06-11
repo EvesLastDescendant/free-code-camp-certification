@@ -1,0 +1,40 @@
+# Local ignores for free-code-camp-certification
+# Keep sensitive and machine-specific files out of the repo
+
+# Node/npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment / secrets
+.env
+.env.*.local
+.secrets/
+*.key
+*.pem
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+.history/
+
+# Build output / caches
+dist/
+build/
+coverage/
+.cache/
+.parcel-cache/
+.next/
+
+# Archives
+*.tgz
+
