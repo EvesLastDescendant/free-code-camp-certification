@@ -5,6 +5,7 @@ function chunkArrayInGroups(arr, num) {
         result.push(copyArray.splice(0, num));
     }
     return result;
+
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
