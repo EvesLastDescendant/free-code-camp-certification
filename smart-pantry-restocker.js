@@ -83,7 +83,7 @@ function planRestock(pantry, shipment) {
 }
 
 console.log(planRestock(pantry, parsedShipment));
-const actionAbles = planRestock(pantry, parsedShipment);
+const actionAble = planRestock(pantry, parsedShipment);
 
 function groupByZone(actions) {
     const grouped = {};
@@ -97,8 +97,8 @@ function groupByZone(actions) {
     return grouped;
 }
 
-console.log(groupByZone(actionAbles));
-const zoneGrouped = groupByZone(actionAbles);
+console.log(groupByZone(actionAble));
+const zoneGrouped = groupByZone(actionAble);
 
 function clonePantry(pantry) {
     return pantry.map(item => ({ ...item }));
