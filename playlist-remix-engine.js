@@ -13,7 +13,9 @@ You should create a function named dedupeTracks that accepts an array of track o
 
 You should create a function named enforceArtistQuota that accepts an array of track objects as returned by dedupeTracks and a number representing the maximum allowed occurrences per artist. The function should return a new array where no artist appears more times than the given number, keeping the earliest occurrences.
 
-You should create a function named buildSchedule that accepts an array of track objects as returned by enforceArtistQuota and returns a new array of { slot, trackId } objects, where slot is a 1-based index representing each track's position in the broadcast order.
+You should create a function named buildSchedule that accepts an array of track objects as
+* returned by enforceArtistQuota and returns a new array of { slot, trackId } objects, where slot is a 1-based index representing each track's position in the broadcast
+* order.
 
 You should create a function named remixPlaylist that accepts an array of playlists and the maximum number of allowed occurrences per artist. The function should return the final broadcast schedule as an array of { slot, trackId } objects, by calling flattenPlaylists, scoreTracks, dedupeTracks, enforceArtistQuota, and buildSchedule in order.
 
@@ -141,3 +143,12 @@ function remixPlaylist(playlists, quota) {
     const artistQuotaTracks = enforceArtistQuota(uniqueTracks, 1);
     return buildSchedule(artistQuotaTracks);
 }
+
+function trackTotal(initialValue) {
+    let total = initialValue;
+    return function(increment) {
+        total += increment;
+        return total;
+    };
+}
+
