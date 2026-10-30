@@ -5,6 +5,14 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
+.theme-corporate {
+    background: blue;
+}
+
+.theme-personal {
+    background: skyblue;
+}
+
 button {
     padding: 5px;
 }
