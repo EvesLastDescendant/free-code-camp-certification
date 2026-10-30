@@ -1,16 +1,23 @@
 body {
     margin: 0;
+    padding: 5px 10px;
     font-family: sans-serif;
     transition: background 0.3s, color 0.3s;
 }
 
+button {
+    padding: 5px;
+}
+
 ul {
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
 }
 
 li {
+    margin: 3px 0;
     list-style-type: none;
+    cursor: pointer;
 }
 
 #status {
