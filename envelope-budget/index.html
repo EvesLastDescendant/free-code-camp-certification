@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Envelope Budget App</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main>
+		<h1>Envelop Budgeter</h1>
+		<div class="container">
+			<form id="budget-form">
+				<label for="income">Total Monthly Income</label>
+				<input type="number" min="0" placeholder="e.g. 2000" required id="income">
+				<fieldset id="rent">
+					<legend>Rent</legend>
+					<label for="rent-amount">Amount</label>
+					<input type="number" min="0" id="rent-amount" placeholder="e.g. 1000">
+				</fieldset>
+				<fieldset id="food">
+					<legend>Food</legend>
+					<div class="input-container"></div>
+				</fieldset>
+				<fieldset id="utilities">
+					<legend>Utilities</legend>
+					<div class="input-container"></div>
+				</fieldset>
+				<fieldset id="entertainment">
+					<legend>Entertainment</legend>
+					<div class="input-container"></div>
+				</fieldset>
+				<div class="controls">
+					<span>
+						<label for="entry-dropdown">Add expense to:</label>
+						<select name="options" id="entry-dropdown">
+							<option value="food" selected>Food</option>
+							<option value="utilities">Utilities</option>
+							<option value="entertainment">Entertainment</option>
+						</select>
+						<button id="add-entry" type="button">Add Entry</button>
+					</span>
+				</div>
+				<div>
+					<button type="submit">Calculate Remaining Budget</button>
+					<button id="clear" type="button">Clear</button>
+				</div>
+				<div id="output" class="output hide"></div>
+			</form>
+		</div>
+	</main>
+	<script src="script.js" defer ></script>
+</body>
+</html>
